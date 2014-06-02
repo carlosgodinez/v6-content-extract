@@ -1,0 +1,1 @@
+0,15,30,45 * * * * (cd /data/home/cgodinez/public_html/tools; ./ewbatch.pl)

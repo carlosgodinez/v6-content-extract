@@ -1,0 +1,66 @@
+.head{
+	background-color: #BEBEBE;
+    	font-size: 25px;
+    	text-align: center;
+	color: teal;
+	border-style: groove;
+}
+
+.main {
+	margin: 2px auto;
+	width: 325px;
+}
+
+.getfilemain { 
+	margin: 2px auto;
+	width: 500px;
+	width: -moz-fit-content;
+}
+
+.labelField {
+	float:left;
+	width: 160px;
+}
+
+.inputField {
+	border-style: groove;
+}
+
+.field {
+	font-size: 17px;
+	font-family: serif;
+	margin-top: 5px;
+	float: left;
+	width: 100%;
+	color: tomato;
+}
+.tablefield {
+font-size: 17px;
+        font-family: serif;
+        margin-top: 5px;
+        width: 100%;
+        color: #FF6347;
+}
+#submit {
+	-moz-border-bottom-colors: none;
+	-moz-border-left-colors: none;
+	-moz-border-right-colors: none;
+	-moz-border-top-colors: none;
+	border-color: #BEBEBE;
+	border-image: none;
+	border-radius: 10px 10px 10px 10px;
+	border-style: solid;
+	border-width: 1px;
+	box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+	color: teal;
+	cursor: pointer;
+	font: 75% Futura,‘Century Gothic’,AppleGothic,sans-serif;
+	padding: 4px 10px;
+	margin-left: 90px;
+	margin-top: 20px;
+	background-color: #BEBEBE;
+}
+
+input[type="input"] {
+	background-color : #d1d1d1; 
+}

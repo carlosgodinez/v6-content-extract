@@ -1,0 +1,54 @@
+.head{
+	background-color: #BEBEBE;
+    font-size: 25px;
+    text-align: center;
+	color: teal;
+	border-style: groove;
+}
+
+.labelField {
+	margin-left:400px;
+	text-align: right;
+}
+
+.inputField {
+	margin-left: 50px;
+	border-style: groove;
+}
+
+div.field {
+	font-size: 17px;
+	font-family: serif;
+	margin-top: 5px;
+	margin-right: 556px;
+    padding-bottom: 7px;
+	float: right;
+	color: tomato;
+}
+
+#submit {
+	-moz-border-bottom-colors: none;
+	-moz-border-left-colors: none;
+	-moz-border-right-colors: none;
+	-moz-border-top-colors: none;
+	background: url("overlay.png") repeat-x scroll center center #FFCC00;
+	border-color: activecaption;
+	border-image: none;
+	border-radius: 10px 10px 10px 10px;
+	border-style: solid;
+	border-width: 1px;
+	box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+	color: teal;
+	cursor: pointer;
+	font: 70% Futura,‘Century Gothic’,AppleGothic,sans-serif;
+	padding: 6px;
+	margin-right: 100px;
+	margin-top: 10px;
+	background-color: activecaption;
+}
+
+input[type="input"] {
+	background-color : #d1d1d1; 
+}
+
+
