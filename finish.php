@@ -17,17 +17,21 @@ $G['TITLE'] = TITLE;
 $G['ME'] = basename($_SERVER['SCRIPT_FILENAME']);
 
 if (isset($_POST['submit'])) {
-  $email = $_POST['email'];
-  $manfname = $_POST['manfname'];
+	$email = $_POST['email'];
+	$manfname = $_POST['manfname'];
 
-  $tn = TABLE_NAME;
-  $db = new bwSQLite3(DB_FILENAME);
+	$tn = TABLE_NAME;
+	$db = new bwSQLite3(DB_FILENAME);
 
-  // @TODO test if insert succeeded
-  $db->sql_do("UPDATE $tn SET email = ? WHERE manfname = ?", $email, $manfname);
-  $message = "Request submitted successfully! You'll receive an email when the request is ready.";
+	try {
+  		$db->sql_do("UPDATE $tn SET email = ? WHERE manfname = ?", $email, $manfname);
+	} catch (PDOException $e) {
+		echo "<pre>" . $e->getMessage() . "</pre>";
+		exit;
+	}
+	$message = "Request submitted successfully! You'll receive an email when the request is ready.";
 } else {
-  $message = "Unable to submit request. Please submit again.";
+	$message = "Unable to submit request. Please try again.";
 }
 ?>
 

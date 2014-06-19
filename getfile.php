@@ -56,7 +56,7 @@ if (isset($_POST['submit'])) {
   <meta charset="utf-8" />
   <title>V6 Content Extraction Tool
   </title>
-  <link href="./includes/style.css" rel="stylesheet">
+  <!-- link href="./includes/style.css" rel="stylesheet" -->
   <link href="./includes/extract.css" rel="stylesheet">
   <script type="text/javascript" src="forms.js"></script>
 </head>

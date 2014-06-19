@@ -1,1 +1,1 @@
-0,15,30,45 * * * * (cd /data/home/cgodinez/public_html/tools; ./ewbatch.pl)
+*/5 * * * * (cd /data/timeinc/content/qa/feeds/htdocs/migrate/ew/tools; ./batch2.pl; ./batch3.pl)

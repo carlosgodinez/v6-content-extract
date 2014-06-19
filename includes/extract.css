@@ -1,4 +1,4 @@
-.head{
+.head {
 	background-color: #BEBEBE;
     	font-size: 25px;
     	text-align: center;
@@ -11,6 +11,11 @@
 	width: 325px;
 }
 
+.result2main {
+	margin: 2px auto;
+	width: 500px;
+}
+
 .getfilemain { 
 	margin: 2px auto;
 	width: 500px;
@@ -20,6 +25,11 @@
 .labelField {
 	float:left;
 	width: 160px;
+}
+
+.resultinputField {
+	width: 290px;
+	border-style: groove;
 }
 
 .inputField {

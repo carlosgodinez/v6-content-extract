@@ -52,22 +52,29 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 		$count = count($manifest);
 		$description = "$count $type $subtype $startDate $endDate";
 		try {
-		  $db->sql_do("insert into $tn (manfname, timestamp, description) values (?, ?, ?)", $manfname, date('m/d/Y'), $description);
+		  $db->sql_do("INSERT INTO $tn (manfname, timestamp, description) VALUES (?, ?, ?)", $manfname, date('m/d/Y H:i'), $description);
 		} catch (PDOException $e) {
-		  error($e->getMessage());
+		  echo "<pre>" . $e->getMessage() . "</pre>";
+		  exit;
 		}
 
 		$result = "
-			<h2>Content Items returned: " . $count . "</h2>
+			<h2 style='color:teal; text-align:center; font-size:20px;'>Content Items returned: " . $count . "</h2>
 			<form method=\"post\" action=\"finish.php\">
-			Enter email to proceed: 
-			<input name=\"email\" type=\"email\" required>
-			<input type=\"hidden\" name=manfname value=\"$manfname\">
-			<input type=\"submit\" name=\"submit\" id=\"submit\" value=\"Submit\">
+			    <div class='main'>
+			      <div class='field'>
+				<label class='labelField'> Enter email to proceed: </label>
+				<input class='inputField' name=\"email\" type=\"email\" required>
+			     </div>
+				<input type=\"hidden\" name=manfname value=\"$manfname\">
+				<div class='field'>
+					<input type=\"submit\" name=\"submit\" id=\"submit\" value=\"Submit\">
+				</div>
+			    </div>
 			</form>
 		";
 	} else {
-		$result = "<h2>No content items returned.</h2>";
+		$result = "<h2 style='color:teal; text-align:center; font-size:20px;'>No content items returned.</h2>";
 	}
 }
 ?>
@@ -77,12 +84,12 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
 <head>
 <meta charset="utf-8" />
 <title> V6 Content Extraction Tool </title>
-<link  rel="stylesheet" type="text/css" href="styles.css" />
+<link  rel="stylesheet" type="text/css" href="./includes/extract.css" />
 <script type="text/javascript" src="forms.js"></script>
 </head>
 <body>
 
-<h1>V6 Content Extraction Tool</h1>
+<div class="head">V6 Content Extraction Tool</div>
 
 <?php echo $result; ?>
 
